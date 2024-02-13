@@ -29,21 +29,15 @@ const Signup = () => {
       newErrors.password = 'Password is required.';
     }
 
-    // Check for minimum password length
     if (password.length < 6) {
       newErrors.password = 'Password must be at least 6 characters.';
     }
 
-    // If there are errors, update the state and stop form submission
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
 
-    // Perform your signup logic here
-    // For example, you can send a request to your backend to create a new user
-
-    // Show alert message after successful registration
     alert(`Registration successful, ${username}! Now login with the registered email and password.`);
   };
 

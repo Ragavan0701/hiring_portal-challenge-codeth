@@ -18,7 +18,6 @@ const Login = () => {
       return;
     }
 
-    // Check for valid email format and domain
     const emailRegex = /^[^\s@]+@gmail\.com$/;
     if (!emailRegex.test(email.trim())) {
       setError('Invalid email format or not a Gmail account.');
@@ -30,16 +29,11 @@ const Login = () => {
       return;
     }
 
-    // Check for minimum password length
     if (password.length < 6) {
       setError('Password must be at least 6 characters.');
       return;
     }
 
-    // Perform your login logic here
-    // For example, you can compare the entered credentials with a predefined set
-
-    // For simplicity, I'll display an alert indicating successful login
     alert('Login successful!');
   };
 
